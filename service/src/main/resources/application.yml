@@ -1,0 +1,25 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:ewm
+    username: test
+    password: test
+  jpa:
+    hibernate:
+      ddlAuto: none
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  application:
+    name: service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9999/eureka
+  instance:
+    preferIpAddress: true
